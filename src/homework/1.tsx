@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -8,8 +8,8 @@ export function Observer({ children, onContentEndVisible }: Props) {
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const options : IntersectionObserverInit = {
-      rootMargin: '0px',
+    const options: IntersectionObserverInit = {
+      rootMargin: "0px",
       threshold: 1.0,
       root: null,
     };
